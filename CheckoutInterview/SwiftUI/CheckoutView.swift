@@ -6,10 +6,10 @@
 import SwiftUI
 
 struct CheckoutView: View {
-    @State var orderResponse: OrderResponse?
-    @State var submissionResponse: SubmissionResponse?
-    @State var isTaskCompleted: Bool = false
-    @State var buttonText = "Submit"
+    @State private var orderResponse: OrderResponse?
+    @State private var submissionResponse: SubmissionResponse?
+    @State private var isTaskCompleted: Bool = false
+    @State private var buttonText = "Submit"
 
     var body: some View {
         NavigationStack {
