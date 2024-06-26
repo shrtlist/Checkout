@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C66C45E2C29E2560062B42F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C45D2C29E2560062B42F /* Item.swift */; };
+		1C66C4602C29E3C30062B42F /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C45F2C29E3C30062B42F /* OrderResponse.swift */; };
+		1C66C4622C29EC5E0062B42F /* SubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C4612C29EC5E0062B42F /* SubmittedView.swift */; };
+		1C66C4642C2B30990062B42F /* SubmissionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C4632C2B30990062B42F /* SubmissionResponse.swift */; };
 		2608B9B82B179B2100EE95F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2608B9B72B179B2100EE95F9 /* ContentView.swift */; };
 		2608B9BA2B179B2200EE95F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2608B9B92B179B2200EE95F9 /* Assets.xcassets */; };
 		2608B9C72B179B2200EE95F9 /* CheckoutInterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2608B9C62B179B2200EE95F9 /* CheckoutInterviewTests.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C66C45D2C29E2560062B42F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		1C66C45F2C29E3C30062B42F /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
+		1C66C4612C29EC5E0062B42F /* SubmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedView.swift; sourceTree = "<group>"; };
+		1C66C4632C2B30990062B42F /* SubmissionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionResponse.swift; sourceTree = "<group>"; };
 		2608B9B22B179B2100EE95F9 /* CheckoutInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckoutInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2608B9B72B179B2100EE95F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2608B9B92B179B2200EE95F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C66C45C2C29E2380062B42F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C66C45D2C29E2560062B42F /* Item.swift */,
+				1C66C45F2C29E3C30062B42F /* OrderResponse.swift */,
+				1C66C4632C2B30990062B42F /* SubmissionResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2608B9A92B179B2100EE95F9 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +113,7 @@
 		2608B9B42B179B2100EE95F9 /* CheckoutInterview */ = {
 			isa = PBXGroup;
 			children = (
+				1C66C45C2C29E2380062B42F /* Model */,
 				35980A362B45D9070060C308 /* Instructions */,
 				2608B9DF2B179B8E00EE95F9 /* Resources */,
 				2608B9F52B179F3900EE95F9 /* Services */,
@@ -137,6 +156,7 @@
 			children = (
 				2608B9B72B179B2100EE95F9 /* ContentView.swift */,
 				2608B9EA2B179DFA00EE95F9 /* CheckoutView.swift */,
+				1C66C4612C29EC5E0062B42F /* SubmittedView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -276,12 +296,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2608B9E42B179CB700EE95F9 /* FakeNetworkSession.swift in Sources */,
+				1C66C45E2C29E2560062B42F /* Item.swift in Sources */,
 				3500B1AF2B20EC5200E728A1 /* ViewController.swift in Sources */,
 				9399D2F02BB6373F00128DB1 /* CheckoutServiceAsync.swift in Sources */,
+				1C66C4602C29E3C30062B42F /* OrderResponse.swift in Sources */,
 				2608B9B82B179B2100EE95F9 /* ContentView.swift in Sources */,
 				2608B9EB2B179DFA00EE95F9 /* CheckoutView.swift in Sources */,
 				9399D2EE2BB6316500128DB1 /* CheckoutServiceCombine.swift in Sources */,
+				1C66C4622C29EC5E0062B42F /* SubmittedView.swift in Sources */,
 				3500B1B12B20ECD400E728A1 /* AppDelegate.swift in Sources */,
+				1C66C4642C2B30990062B42F /* SubmissionResponse.swift in Sources */,
 				2608B9F72B179F4200EE95F9 /* CheckoutService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,7 +472,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.doordash.CheckoutInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG UIKIT";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
