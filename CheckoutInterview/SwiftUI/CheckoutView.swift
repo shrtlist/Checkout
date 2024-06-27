@@ -1,19 +1,18 @@
 //
-//  OrderView.swift
+//  CheckoutView.swift
 //  CheckoutInterview
 //
 
 import SwiftUI
 
 struct CheckoutView: View {
-    @State private var orderResponse: OrderResponse?
-    @State private var submissionResponse: SubmissionResponse?
+    @StateObject private var viewModel = ViewModel()
     @State private var isTaskCompleted: Bool = false
     @State private var buttonText = "Submit"
 
     var body: some View {
         NavigationStack {
-            List(orderResponse?.items ?? [], id: \.name) { item in
+            List(viewModel.orderResponse?.items ?? [], id: \.name) { item in
                 VStack(alignment: .leading) {
                     Text(item.name)
                     Text(item.displayPrice ?? "Free")
@@ -21,18 +20,18 @@ struct CheckoutView: View {
             }
             .listStyle(.plain)
             .navigationDestination(isPresented: $isTaskCompleted) {
-                SubmittedView(status: submissionResponse?.status ?? .delivery_in_progress)
+                SubmittedView(status: viewModel.submissionResponse?.status ?? .delivery_in_progress)
             }
             Spacer()
 
             Button(buttonText) {
                 // Add action
                 Task {
-                    guard let orderId = orderResponse?.id else {
+                    guard let orderId = viewModel.orderResponse?.id else {
                         return
                     }
                     buttonText = "Submitting..."
-                    submissionResponse = await CheckoutServiceAsync().submitOrder(orderId: orderId)
+                    await viewModel.submitOrder(orderId: orderId)
                     isTaskCompleted = true
                     buttonText = "Submit"
                 }
@@ -42,7 +41,7 @@ struct CheckoutView: View {
         }
         .onAppear {
             Task {
-                orderResponse = await CheckoutServiceAsync().fetchOrder()
+                await viewModel.fetchOrder()
             }
         }
     }

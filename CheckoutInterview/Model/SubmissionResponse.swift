@@ -11,7 +11,7 @@ struct SubmissionResponse: Decodable {
     let status: Status
 }
 
-enum Status: String, Codable {
+enum Status: String, Decodable {
     case preparing_order
     case delivery_in_progress
     case delivered
