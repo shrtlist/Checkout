@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C66C45E2C29E2560062B42F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C45D2C29E2560062B42F /* Item.swift */; };
 		1C66C4602C29E3C30062B42F /* OrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C45F2C29E3C30062B42F /* OrderResponse.swift */; };
 		1C66C4622C29EC5E0062B42F /* SubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C4612C29EC5E0062B42F /* SubmittedView.swift */; };
 		1C66C4642C2B30990062B42F /* SubmissionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C66C4632C2B30990062B42F /* SubmissionResponse.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C66C45D2C29E2560062B42F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1C66C45F2C29E3C30062B42F /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
 		1C66C4612C29EC5E0062B42F /* SubmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmittedView.swift; sourceTree = "<group>"; };
 		1C66C4632C2B30990062B42F /* SubmissionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionResponse.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 		1C66C45C2C29E2380062B42F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1C66C45D2C29E2560062B42F /* Item.swift */,
 				1C66C45F2C29E3C30062B42F /* OrderResponse.swift */,
 				1C66C4632C2B30990062B42F /* SubmissionResponse.swift */,
 			);
@@ -296,7 +293,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2608B9E42B179CB700EE95F9 /* FakeNetworkSession.swift in Sources */,
-				1C66C45E2C29E2560062B42F /* Item.swift in Sources */,
 				3500B1AF2B20EC5200E728A1 /* ViewController.swift in Sources */,
 				9399D2F02BB6373F00128DB1 /* CheckoutServiceAsync.swift in Sources */,
 				1C66C4602C29E3C30062B42F /* OrderResponse.swift in Sources */,

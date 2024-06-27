@@ -11,3 +11,8 @@ struct OrderResponse: Decodable {
     let id: String
     let items: [Item]
 }
+
+struct Item: Decodable {
+    let name: String
+    var displayPrice: String?
+}
