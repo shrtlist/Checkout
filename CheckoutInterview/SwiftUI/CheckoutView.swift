@@ -39,10 +39,8 @@ struct CheckoutView: View {
             .buttonStyle(.bordered)
             .foregroundColor(.black)
         }
-        .onAppear {
-            Task {
-                await viewModel.fetchOrder()
-            }
+        .task {
+            await viewModel.fetchOrder()
         }
     }
 }
