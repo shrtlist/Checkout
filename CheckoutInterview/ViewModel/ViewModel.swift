@@ -11,6 +11,7 @@ import Foundation
 class ViewModel: ObservableObject {
     @Published var orderResponse: OrderResponse?
     @Published var submissionResponse: SubmissionResponse?
+    @Published var isTaskCompleted: Bool = false
 
     private let checkoutService = CheckoutServiceAsync()
 
@@ -19,6 +20,8 @@ class ViewModel: ObservableObject {
     }
 
     func submitOrder(orderId: String) async {
+        isTaskCompleted = false
         submissionResponse = await checkoutService.submitOrder(orderId: orderId)
+        isTaskCompleted = true
     }
 }

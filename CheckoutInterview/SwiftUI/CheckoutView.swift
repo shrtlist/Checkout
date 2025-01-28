@@ -7,7 +7,6 @@ import SwiftUI
 
 struct CheckoutView: View {
     @StateObject private var viewModel = ViewModel()
-    @State private var isTaskCompleted: Bool = false
     @State private var buttonText = "Submit"
 
     var body: some View {
@@ -19,7 +18,7 @@ struct CheckoutView: View {
                 }
             }
             .listStyle(.plain)
-            .navigationDestination(isPresented: $isTaskCompleted) {
+            .navigationDestination(isPresented: $viewModel.isTaskCompleted) {
                 SubmittedView(status: viewModel.submissionResponse?.status ?? .delivery_in_progress)
             }
             Spacer()
@@ -32,7 +31,6 @@ struct CheckoutView: View {
                     }
                     buttonText = "Submitting..."
                     await viewModel.submitOrder(orderId: orderId)
-                    isTaskCompleted = true
                     buttonText = "Submit"
                 }
             }

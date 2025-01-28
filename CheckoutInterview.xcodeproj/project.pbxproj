@@ -87,9 +87,16 @@
 			children = (
 				1C66C45F2C29E3C30062B42F /* OrderResponse.swift */,
 				1C66C4632C2B30990062B42F /* SubmissionResponse.swift */,
-				1C674A742C2DCD2200DBC359 /* ViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1C6935482D488930001D42D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C674A742C2DCD2200DBC359 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2608B9A92B179B2100EE95F9 = {
@@ -117,6 +124,7 @@
 				35980A362B45D9070060C308 /* Instructions */,
 				2608B9DF2B179B8E00EE95F9 /* Resources */,
 				2608B9F52B179F3900EE95F9 /* Services */,
+				1C6935482D488930001D42D9 /* ViewModel */,
 				3500B1AD2B20EC4800E728A1 /* UIKit */,
 				2608B9E52B179CF700EE95F9 /* SwiftUI */,
 				2608B9E22B179C9700EE95F9 /* Support Files */,
@@ -236,7 +244,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					2608B9B12B179B2100EE95F9 = {
 						CreatedOnToolsVersion = 15.0;
@@ -512,7 +520,6 @@
 		2608B9DA2B179B2200EE95F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -532,7 +539,6 @@
 		2608B9DB2B179B2200EE95F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
