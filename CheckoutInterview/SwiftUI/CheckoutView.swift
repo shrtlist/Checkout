@@ -37,6 +37,7 @@ struct CheckoutView: View {
             .buttonStyle(.bordered)
             .foregroundColor(.black)
         }
+        .padding(.bottom)
         .task {
             await viewModel.fetchOrder()
         }
