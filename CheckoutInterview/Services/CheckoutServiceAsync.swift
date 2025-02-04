@@ -14,9 +14,7 @@ class CheckoutServiceAsync {
 
         var response: OrderResponse
         do {
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            response = try decoder.decode(OrderResponse.self, from: data)
+            response = try JSONDecoder().decode(OrderResponse.self, from: data)
         } catch {
             fatalError()
         }
@@ -29,8 +27,7 @@ class CheckoutServiceAsync {
 
         var response: SubmissionResponse
         do {
-            let decoder = JSONDecoder()
-            response = try decoder.decode(SubmissionResponse.self, from: data)
+            response = try JSONDecoder().decode(SubmissionResponse.self, from: data)
         } catch {
             fatalError()
         }

@@ -10,8 +10,8 @@ import Foundation
 @MainActor
 class ViewModel: ObservableObject {
     @Published var orderResponse: OrderResponse?
-    @Published var submissionResponse: SubmissionResponse?
-    @Published var isTaskCompleted: Bool = false
+    @Published var status: Status?
+    @Published var isTaskCompleted = false
 
     private let checkoutService = CheckoutServiceAsync()
 
@@ -21,7 +21,7 @@ class ViewModel: ObservableObject {
 
     func submitOrder(orderId: String) async {
         isTaskCompleted = false
-        submissionResponse = await checkoutService.submitOrder(orderId: orderId)
+        status = await checkoutService.submitOrder(orderId: orderId).status
         isTaskCompleted = true
     }
 }

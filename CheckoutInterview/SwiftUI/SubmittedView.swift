@@ -16,5 +16,5 @@ struct SubmittedView: View {
 }
 
 #Preview {
-    SubmittedView(status: .preparing_order)
+    SubmittedView(status: .preparingOrder)
 }

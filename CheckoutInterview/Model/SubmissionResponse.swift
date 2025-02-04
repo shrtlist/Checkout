@@ -12,15 +12,15 @@ struct SubmissionResponse: Decodable {
 }
 
 enum Status: String, Decodable {
-    case preparing_order
-    case delivery_in_progress
+    case preparingOrder = "preparing_order"
+    case deliveryInProgress = "delivery_in_progress"
     case delivered
 
     var localizedString: String {
         switch self {
-        case .preparing_order:
+        case .preparingOrder:
             return NSLocalizedString("Preparing Order", comment: "Some comment")
-        case .delivery_in_progress:
+        case .deliveryInProgress:
             return NSLocalizedString("Delivery In Progress", comment: "Some comment")
         case .delivered:
             return NSLocalizedString("Delivered", comment: "Some comment")

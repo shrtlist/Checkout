@@ -19,7 +19,7 @@ struct CheckoutView: View {
             }
             .listStyle(.plain)
             .navigationDestination(isPresented: $viewModel.isTaskCompleted) {
-                SubmittedView(status: viewModel.submissionResponse?.status ?? .delivery_in_progress)
+                SubmittedView(status: viewModel.status ?? .deliveryInProgress)
             }
             Spacer()
 
